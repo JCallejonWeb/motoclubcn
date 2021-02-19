@@ -34,6 +34,18 @@ return [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
+        'images' => [
+            'driver' => 'local',
+            'root' => storage_path('app/images'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'rutes' => [
+            'driver' => 'local',
+            'root' => storage_path('app/rutes'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
 
         'public' => [
             'driver' => 'local',
