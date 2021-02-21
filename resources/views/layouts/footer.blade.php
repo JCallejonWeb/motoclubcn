@@ -1,4 +1,5 @@
-
+</section>
+</div>
 <!-- Footer -->
 <footer class="navbar-dark bg-primary text-center text-lg-start">
   <!-- Grid container -->

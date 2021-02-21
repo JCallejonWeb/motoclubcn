@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 use App\Models\Image;
 
@@ -47,8 +48,7 @@ class ImageController extends Controller{
      return redirect()->route('images')->with([
          'message' => 'La foto se ha subido correctamente!!'
      ]);
-
-
+     
    }
 
    public function getImage($filename){
@@ -56,6 +56,17 @@ class ImageController extends Controller{
       return new Response($file,200);
    }
 
+   public function delete($id){
+
+      $image = Image::find($id);
+      DB::table('images')->delete($id);
+      Storage::disk('images')->delete($image->image_path);
+  
+      return redirect()->route('images')->with([
+          'message' => 'Imagen eliminada correctamente!'
+      ]);
+  
+     }
 
 
 }

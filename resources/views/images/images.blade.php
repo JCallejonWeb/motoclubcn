@@ -12,8 +12,7 @@
                   <img class='imgUpload' src="{{ route('image.file',['filename' => $image->image_path]) }}">
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-danger">Eliminar</button>
-                    <button class="btn btn-success">Editar</button>
+                    <a href="{{route('image.delete',$image->id)}}" class="btn btn-danger">Eliminar</a>
                 </div>
             </div>
 
