@@ -24,3 +24,7 @@ Route::get('images',[App\Http\Controllers\ImageController::class,'images'])->nam
 Route::post('images/save',[App\Http\Controllers\ImageController::class,'save'])->name('images.save');
 Route::get('image/file/{filename}',[App\Http\Controllers\ImageController::class, 'getImage'])->name('image.file');
 Route::get('image/delete/{id}',[App\Http\Controllers\ImageController::class,'delete'])->name('image.delete');
+Route::get('rutas',[App\Http\Controllers\RutaController::class,'rutas'])->name('rutas');
+Route::post('rutas/save',[App\Http\Controllers\RutaController::class,'save'])->name('rutas.save');
+Route::get('rutas/file/{filename}',[App\Http\Controllers\RutaController::class, 'getImage'])->name('ruta.file');
+Route::get('rutas/delete/{id}',[App\Http\Controllers\RutaController::class, 'delete'])->name('ruta.delete');

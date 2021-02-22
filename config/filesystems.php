@@ -40,9 +40,9 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-        'rutes' => [
+        'rutas' => [
             'driver' => 'local',
-            'root' => storage_path('app/rutes'),
+            'root' => storage_path('app/rutas'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],

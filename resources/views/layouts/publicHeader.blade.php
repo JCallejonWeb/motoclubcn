@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" class="href">
+    <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
 
     <!--Scripts-->
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>

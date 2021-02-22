@@ -14,11 +14,11 @@ class ImageController extends Controller{
 
    public function __construct()
    {
-       $this->middleware('auth')->only(['images','save']);
+       $this->middleware('auth')->only(['images','save','delete']);
    }
 
    public function images(){
-      $this->middleware('auth');
+
       $images = Image::orderBy('id','desc')->paginate(8);
 
       return view('images.images',['images' => $images]);
