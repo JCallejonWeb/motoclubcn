@@ -17,7 +17,7 @@
                     @csrf
 
                     <div class="form-group">
-                        <label for="titulo">titulo</label>
+                        <label for="titulo">Título</label>
                         <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Titulo" required>
                     </div>
                     <div class="form-group">
@@ -33,7 +33,7 @@
                         <input type="text" name="llegada" class="form-control" id="llegada" placeholder="Lugar de llegada" required>
                     </div>
                     <div class="form-group">
-                        <label for="fecha">Dia de la ruta</label>
+                        <label for="fecha">Día de la ruta</label>
                         <input type="date" class="form-control" id="fecha" name="fecha">
                     </div>
                     <div class="row">

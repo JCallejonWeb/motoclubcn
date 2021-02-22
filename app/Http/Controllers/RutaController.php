@@ -83,5 +83,26 @@ class RutaController extends Controller
         ]);
     
        }
+
+   public function update(Request $request){
+       
+    $user = \Auth::user();
+    $id = $request->input('id'); 
+    $ruta = Ruta::find($id);
+
+    $ruta->id_user = $user->id;
+
+    $ruta->titulo = $request->input('titulo');
+    $ruta->descripcion = $request ->input('descripcion');
+    $ruta->salida = $request->input('salida');
+    $ruta->llegada = $request->input('llegada');
+    $ruta->fecha = $request->input('fecha');
+
+
+    $ruta->update();
+
+    return redirect()->route('rutas')->with(['message'=>'Ruta actualizada con éxito']);
+    
+   }
   
 }

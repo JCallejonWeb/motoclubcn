@@ -28,3 +28,4 @@ Route::get('rutas',[App\Http\Controllers\RutaController::class,'rutas'])->name('
 Route::post('rutas/save',[App\Http\Controllers\RutaController::class,'save'])->name('rutas.save');
 Route::get('rutas/file/{filename}',[App\Http\Controllers\RutaController::class, 'getImage'])->name('ruta.file');
 Route::get('rutas/delete/{id}',[App\Http\Controllers\RutaController::class, 'delete'])->name('ruta.delete');
+Route::post('rutas/update',[App\Http\Controllers\RutaController::class,'update'])->name('ruta.update');
