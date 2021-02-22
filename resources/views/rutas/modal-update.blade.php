@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                    <form method="POST" action="{{route('ruta.update')}}" enctype="multipart/form-data">
+                    <form method="GET" action="{{route('ruta.update')}}" enctype="multipart/form-data">
                         @csrf
                         <input name="id" hidden value="{{$ruta->id}}">
                         <div class="form-group">

@@ -15,7 +15,7 @@ class RutaController extends Controller
     
     public function __construct()
     {
-        $this->middleware('auth')->only(['rutas','save']);
+        $this->middleware('auth')->only(['rutas','save','delete','getImage','update']);
     }
 
     public function rutas(){
