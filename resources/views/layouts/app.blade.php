@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Admin MC') }}</title>
+    <title>Admin MC</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -17,14 +17,17 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+
 
     <!-- Styles -->
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" class="href">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </head>
 
 <body>
@@ -50,15 +53,15 @@
                     @endif
                     @else
                     <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('images')}}">Imagenes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('rutas')}}">Rutas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Usuarios</a>
-                    </li>
+                            <a class="nav-link" href="{{route('usuarios')}}">Usuarios</a>
+                        </li>
                     </ul>
                     @endguest
                     <!-- Right Side Of Navbar -->
@@ -81,7 +84,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Cerrar sesión') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -105,7 +108,13 @@
             <a class="text-dark" href="">MotoClub Comarca de Níjar</a>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('js/scripts.js')}}">
+
+    </script>
 
 </body>
 

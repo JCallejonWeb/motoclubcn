@@ -25,7 +25,7 @@ class ImageController extends Controller{
    }
 
    public function save(Request $request){
-      $this->middleware('auth');
+
       $validate = $this->validate($request, [
          'image_path' => 'required|image'
      ]);

@@ -29,3 +29,6 @@ Route::post('rutas/save',[App\Http\Controllers\RutaController::class,'save'])->n
 Route::get('rutas/file/{filename}',[App\Http\Controllers\RutaController::class, 'getImage'])->name('ruta.file');
 Route::get('rutas/delete/{id}',[App\Http\Controllers\RutaController::class, 'delete'])->name('ruta.delete');
 Route::get('rutas/update',[App\Http\Controllers\RutaController::class,'update'])->name('ruta.update');
+Route::get('usuarios',[App\Http\Controllers\UserController::class,'usuarios'])->name('usuarios');
+Route::post('usuarios/save',[App\Http\Controllers\UserController::class,'save'])->name('usuarios.save');
+Route::get('usuarios/delete/{id}',[App\Http\Controllers\UserController::class,'delete'])->name('usuarios.delete');
