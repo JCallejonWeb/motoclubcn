@@ -15,13 +15,19 @@ class RutaController extends Controller
     
     public function __construct()
     {
-        $this->middleware('auth')->only(['rutas','save','delete','getImage','update']);
+        $this->middleware('auth')->only(['rutas','save','delete','update']);
     }
 
     public function rutas(){
         $rutas = Ruta::orderBy('id','desc')->paginate(6);
   
         return view ('rutas.rutas',['rutas' => $rutas]);
+    }
+
+    public function rutasPublicas(){
+        $rutas = Ruta::orderBy('id','desc')->paginate(6);
+  
+        return view ('rutas.public-rutas',['rutas' => $rutas]);
     }
 
     public function save(Request $request){

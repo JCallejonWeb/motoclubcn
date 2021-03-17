@@ -39,7 +39,6 @@ class UserController extends Controller
         ]);
 
         $user = new User();
-
         $user->name = $name;
         $user->apellidos = $apellidos;
         $user->email = $email;

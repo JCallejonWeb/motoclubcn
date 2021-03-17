@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/sobre-nosotros', function () {
+    return view('welcome');
+})->name('sobre-nosotros');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\ImageController::class, 'images'])->name('home');
@@ -24,7 +28,7 @@ Route::get('images',[App\Http\Controllers\ImageController::class,'images'])->nam
 Route::post('images/save',[App\Http\Controllers\ImageController::class,'save'])->name('images.save');
 Route::get('image/file/{filename}',[App\Http\Controllers\ImageController::class, 'getImage'])->name('image.file');
 Route::get('image/delete/{id}',[App\Http\Controllers\ImageController::class,'delete'])->name('image.delete');
-Route::get('rutas',[App\Http\Controllers\RutaController::class,'rutas'])->name('rutas');
+Route::get('ruta',[App\Http\Controllers\RutaController::class,'rutas'])->name('rutas');
 Route::post('rutas/save',[App\Http\Controllers\RutaController::class,'save'])->name('rutas.save');
 Route::get('rutas/file/{filename}',[App\Http\Controllers\RutaController::class, 'getImage'])->name('ruta.file');
 Route::get('rutas/delete/{id}',[App\Http\Controllers\RutaController::class, 'delete'])->name('ruta.delete');
@@ -32,3 +36,4 @@ Route::get('rutas/update',[App\Http\Controllers\RutaController::class,'update'])
 Route::get('usuarios',[App\Http\Controllers\UserController::class,'usuarios'])->name('usuarios');
 Route::post('usuarios/save',[App\Http\Controllers\UserController::class,'save'])->name('usuarios.save');
 Route::get('usuarios/delete/{id}',[App\Http\Controllers\UserController::class,'delete'])->name('usuarios.delete');
+Route::get('rutas-publicas',[App\Http\Controllers\RutaController::class,'rutasPublicas'])->name('rutas-publicas');

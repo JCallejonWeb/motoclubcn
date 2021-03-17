@@ -34,7 +34,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="">
                     Administración MC
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -53,6 +53,9 @@
                     @endif
                     @else
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Visitar página</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('images')}}">Imagenes</a>
                         </li>

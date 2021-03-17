@@ -1,7 +1,7 @@
 </section>
 </div>
 <!-- Footer -->
-<footer class="navbar-dark bg-primary text-center text-lg-start">
+<footer class="navbar-dark bg-primary text-center text-lg-start piePublico">
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->
@@ -71,7 +71,7 @@
   </div>
   <!-- Copyright -->
 </footer>
-<!-- Footer -->
+
 <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
 </body>
 </html>

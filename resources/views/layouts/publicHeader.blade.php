@@ -31,10 +31,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Sobre nosotros</a>
+          <a class="nav-link" href="{{route('sobre-nosotros')}}">Sobre nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Rutas</a>
+          <a class="nav-link" href="{{route('rutas-publicas')}}">Rutas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Galeria</a>
@@ -46,14 +46,9 @@
 
 <!-- Full Page Image Header with Vertically Centered Content -->
 <header class="masthead">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-12 text-center">
-        <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
-        <p class="lead">A great starter layout for a landing page</p>
-      </div>
-    </div>
-  </div>
+<video loop muted autoplay poster="URL/TO/poster.jpg" class="background-video">
+		<source src="{{ asset('videos/headervideo2.mp4') }}" type="video/mp4">
+</video>
 </header>
 
 <!-- Page Content -->
