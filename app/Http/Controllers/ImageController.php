@@ -24,6 +24,13 @@ class ImageController extends Controller{
       return view('images.images',['images' => $images]);
    }
 
+   public function publicImages(){
+
+        $images = Image::orderBy('id','desc')->paginate(12);
+
+        return view('galeria.galeria',['images' => $images]);
+   }
+
    public function save(Request $request){
 
       $validate = $this->validate($request, [

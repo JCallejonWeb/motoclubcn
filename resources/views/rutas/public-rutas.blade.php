@@ -1,5 +1,6 @@
 @include('layouts.publicHeader')
-<div class="container rutasPublicas">
+<div id="rutas" class="container rutasPublicas">
+    <h1>Rutas</h1>
     <div class="row justify-content-center">
 
         @foreach($rutas as $ruta)

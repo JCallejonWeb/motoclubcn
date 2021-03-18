@@ -37,3 +37,4 @@ Route::get('usuarios',[App\Http\Controllers\UserController::class,'usuarios'])->
 Route::post('usuarios/save',[App\Http\Controllers\UserController::class,'save'])->name('usuarios.save');
 Route::get('usuarios/delete/{id}',[App\Http\Controllers\UserController::class,'delete'])->name('usuarios.delete');
 Route::get('rutas-publicas',[App\Http\Controllers\RutaController::class,'rutasPublicas'])->name('rutas-publicas');
+Route::get('/galeria',[App\Http\Controllers\ImageController::class,'publicImages'])->name('galeria');
