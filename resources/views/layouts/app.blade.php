@@ -20,13 +20,17 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
-
-
+    
     <!-- Styles -->
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" class="href">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
+
+
+
+
 
 </head>
 
@@ -115,10 +119,15 @@
     <!-- Scripts -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset('js/scripts.js')}}">
-
-    </script>
-
+    <script src="{{ asset('js/scripts.js')}}"></script>
+    <script src="{{ asset('js/dropzone.min.js') }}"></script>
+    <script src="{{ asset('js/dropzone-config.js') }}"></script>
+    <script type="text/javascript">
+        Dropzone.options.imageUpload = {
+            maxFilesize :4,
+            acceptedFiles: ".jpeg,.jpg,.png,.gif,.pdf"
+        };
+</script>
 </body>
 
 </html>

@@ -75,5 +75,35 @@ class ImageController extends Controller{
   
      }
 
+     public function multipleUpload(Request $request){
+        $photos = $request->file('image_path');
+
+        if (!is_array($photos)) {
+            $photos = [$photos];
+        }
+
+        for ($i = 0; $i < count($photos); $i++) {
+
+            $photo = $photos[$i];
+
+            $img = new Image();
+
+            //POnemos nombre uncico
+            $image_path_name = time().$photo->getClientOriginalName();
+            //Guardamos en la capteta estorage/app/users
+            Storage:: disk('images')->put($image_path_name, File::get($photo));
+            //se lo setemaos al obj image
+            $img->image_path = $image_path_name;
+
+            $img->save();
+
+        }
+        
+        return redirect()->route('images')->with([
+            'message' => 'Fotos subidas correctamente!!'
+        ]);
+        
+     }
+
 
 }
